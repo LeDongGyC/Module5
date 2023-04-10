@@ -1,0 +1,26 @@
+<p>calculator works!</p>
+<label for="">First Number</label>
+<input type="number" id="" #firstNumber><br>
+<label for="">Second Number</label>
+<input type="number" id="" #secondNumber><br>
+<!--<button (click)="sum(firstNumber.value,secondNumber.value)">Tong</button>-->
+<!--<button (click)="minus(firstNumber.value,secondNumber.value)">Hieu</button>-->
+<!--<button (click)="multiplication(firstNumber.value,secondNumber.value)">Nhan</button>-->
+<!--<button (click)="division(firstNumber.value,secondNumber.value)">Chia</button>-->
+<!--<select #operation>-->
+<!--  <option value="+">+</option>-->
+<!--  <option value="-">-</option>-->
+<!--  <option value="*">*</option>-->
+<!--  <option value="/">/</option>-->
+<!--</select>-->
+<select [(ngModel)]="operator">
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+</select>
+<button (click)="sum(firstNumber.value,secondNumber.value)">Tong</button>
+<p>Result: {{result}}</p>
+<input type="color" [(ngModel)]="color">
+<p [style.color]="color">Lorem ipsum.</p>
+<p style="color: {{color}}">Lorem ipsum.</p>
