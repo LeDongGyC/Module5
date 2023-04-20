@@ -1,0 +1,63 @@
+<form novalidate [formGroup]="rfRegister">
+  <div class="form-group">
+    <input type="text" class="form-control" formControlName="email" placeholder="Email">
+    <p class="text-danger" *ngIf="rfRegister.controls.email.touched && rfRegister.controls.email?.errors?.required">Bắt
+      buộc nhập</p>
+    <p class="text-danger" *ngIf="rfRegister.controls.email.touched && rfRegister.controls.email?.errors?.email">Email
+      không đúng định dạng</p>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" formControlName="password" placeholder="Password">
+    <p class="text-danger"
+       *ngIf="rfRegister.controls.password.touched && rfRegister.controls.password?.errors?.required">Bắt buộc nhập</p>
+    <p class="text-danger"
+       *ngIf="rfRegister.controls.password.touched && rfRegister.controls.password?.errors?.minlength">Mật khẩu dài hơn
+      6 kí tự</p>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Confirm Password" formControlName="confirmPassword">
+    <p class="text-danger"
+       *ngIf="rfRegister.controls.confirmPassword.touched && rfRegister.controls.confirmPassword?.errors?.required">Bắt
+      buộc nhập</p>
+    <p class="text-danger"
+       *ngIf="rfRegister.controls.confirmPassword.touched && rfRegister.controls.confirmPassword?.errors?.minlength">Mật
+      khẩu dài hơn 6 kí tự</p>
+    <p class="text-danger"
+       *ngIf="rfRegister.controls.confirmPassword.touched && rfRegister.hasError('passwordNotMatch')">Mật khẩu nhập lại
+      sai</p>
+  </div>
+  <div class="form-group">
+    <label for="">Country</label>
+    <select formControlName="country" class="form-control">
+      <option>VietNam</option>
+      <option>China</option>
+      <option>Japan</option>
+      <option>USA</option>
+      <option>UK</option>
+    </select>
+    <p class="text-danger" *ngIf="rfRegister.controls.country.touched && rfRegister.controls.country?.errors?.required">
+      Chọn 1 thành phố</p>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Age" formControlName="age">
+    <p class="text-danger" *ngIf="rfRegister.controls.age.touched && rfRegister.controls.age?.errors?.required">Bắt buộc
+      nhập</p>
+    <p class="text-danger" *ngIf="rfRegister.controls.age.touched && rfRegister.controls.age?.errors?.min">Tuổi trên
+      18</p>
+  </div>
+  <div class="form-group">
+    <label for="">Giới tính</label>
+    <input type="radio" value="male" id="gender" name="gender" formControlName="gender"> Nam
+    <input type="radio" value="female" id="_gender" name="gender" formControlName="gender"> Nữ
+    <p class="text-danger" *ngIf="rfRegister.controls.gender.touched && rfRegister.controls.gender?.errors?.required">
+      Bắt buộc chọn</p>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" name="" id="" placeholder="Phone" formControlName="phone">
+    <p class="text-danger" *ngIf="rfRegister.controls.phone.touched && rfRegister.controls.phone?.errors?.required">Bắt
+      buộc chọn</p>
+    <p class="text-danger" *ngIf="rfRegister.controls.phone.touched && rfRegister.controls.phone?.errors?.pattern">Lỗi
+      định dạng</p>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="rfRegister.invalid">Submit</button>
+</form>
