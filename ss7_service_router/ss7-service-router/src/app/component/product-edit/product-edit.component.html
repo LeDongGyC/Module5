@@ -1,0 +1,19 @@
+<form [formGroup]="rfEdit" (ngSubmit)="update()">
+  <div>
+    <label>Id: </label>
+    <input type="text" formControlName='id' readonly value="{{product.id}}">
+  </div>
+  <div>
+    <label>Name: </label>
+    <input type="text" formControlName='name'>
+  </div>
+  <div>
+    <label>Price: </label>
+    <input type="number" formControlName='price'>
+  </div>
+  <div>
+    <label>Description: </label>
+    <input type="text" formControlName='description'>
+  </div>
+  <button type="submit">Save</button>
+</form>

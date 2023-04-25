@@ -1,0 +1,9 @@
+<form [formGroup]="rfProduct" (ngSubmit)="add()">
+  <input type="text" formControlName="name" placeholder="Nhập tên sản phẩm"><br>
+  <p *ngIf="rfProduct.controls.name.touched && rfProduct.controls.name?.errors?.required">Bắt buộc nhập</p>
+  <input type="text" formControlName="price" placeholder="Nhập giá tiền"><br>
+  <p *ngIf="rfProduct.controls.price.touched && rfProduct.controls.price?.errors?.required">Bắt buộc nhập</p>
+  <input type="text" formControlName="description" placeholder="Nhập mô tả sản phẩm"><br>
+  <p *ngIf="rfProduct.controls.description.touched && rfProduct.controls.description?.errors?.required">Bắt buộc nhập</p>
+  <button [disabled]="rfProduct.invalid">Tạo mới</button>
+</form>
