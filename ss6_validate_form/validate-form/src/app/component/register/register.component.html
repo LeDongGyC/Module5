@@ -7,7 +7,7 @@
       không đúng định dạng</p>
   </div>
   <div class="form-group">
-    <input type="text" class="form-control" formControlName="password" placeholder="Password">
+    <input #pass type="text" class="form-control" formControlName="password" placeholder="Password">
     <p class="text-danger"
        *ngIf="rfRegister.controls.password.touched && rfRegister.controls.password?.errors?.required">Bắt buộc nhập</p>
     <p class="text-danger"
@@ -15,7 +15,7 @@
       6 kí tự</p>
   </div>
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Confirm Password" formControlName="confirmPassword">
+    <input #conPass type="text" class="form-control" placeholder="Confirm Password" formControlName="confirmPassword">
     <p class="text-danger"
        *ngIf="rfRegister.controls.confirmPassword.touched && rfRegister.controls.confirmPassword?.errors?.required">Bắt
       buộc nhập</p>
@@ -24,6 +24,9 @@
       khẩu dài hơn 6 kí tự</p>
     <p class="text-danger"
        *ngIf="rfRegister.controls.confirmPassword.touched && rfRegister.hasError('passwordNotMatch')">Mật khẩu nhập lại
+      sai</p>
+    <p class="text-danger"
+       *ngIf="pass.value !== conPass.value">Mật khẩu nhập lại
       sai</p>
   </div>
   <div class="form-group">

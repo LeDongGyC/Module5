@@ -1,0 +1,76 @@
+<form class="d-flex" style="padding-top: 5px" [formGroup]="searchForm" (ngSubmit)="search()">
+  <table>
+    <tr>
+      <td>Tên:</td>
+      <td><input class="form-control" type="text" formControlName="searchName"></td>
+      <td>Ngày bắt đầu:</td>
+      <td><input class="form-control" type="date" formControlName="dateStart"></td>
+    </tr>
+    <tr>
+      <td>Ngày kết thúc:</td>
+      <td><input class="form-control" type="date" formControlName="dateEnd"></td>
+      <td>
+        <button class="btn btn-success" type="submit">Tìm kiếm</button>
+      </td>
+    </tr>
+  </table>
+</form>
+<table class="table">
+  <thead>
+  <tr>
+    <th>STT</th>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Type Customer</th>
+    <th>Date Of Birth</th>
+    <th>Id Card</th>
+    <th>Phone Number</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let items of customers; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{items.id}}</td>
+    <td>{{items.name}}</td>
+    <td>{{items.customerType.name}}</td>
+    <td>{{items.dateOfBirth | date : 'dd/MM/yyyy'}}</td>
+    <td>{{items.idCard}}</td>
+    <td>{{items.phoneNumber}}</td>
+    <td>{{items.email}}</td>
+    <td>{{items.address}}</td>
+    <td><a routerLink="/customer/edit/{{items.id}}" type="button" class="btn btn-primary">Edit</a></td>
+    <td>
+      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
+              (click)="showDelete(items)">
+        Delete
+      </button>
+    </td>
+  </tr>
+  <tr *ngIf="customers.length==0">
+      <td colspan="11">Danh sách trống</td>
+  </tr>
+  </tbody>
+</table>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Do you want delete id: {{deleteId}} with name is {{deleteName}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="delete(deleteId)">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>

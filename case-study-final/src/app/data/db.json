@@ -1,0 +1,269 @@
+{
+  "customerType": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinum"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ],
+  "customer": [
+    {
+      "id": 1,
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "name": "Phạm Lê Đông 1",
+      "dateOfBirth": "2003-05-17",
+      "idCard": "123456789",
+      "phoneNumber": "123456789",
+      "email": "dong1@gmail.com",
+      "address": "Khối 1, Thị Trấn, Núi Thành, Quảng Nam"
+    },
+    {
+      "id": 2,
+      "customerType": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "name": "Phạm Lê Đông 2",
+      "dateOfBirth": "2003-05-02",
+      "idCard": "223456789",
+      "phoneNumber": "223456789",
+      "email": "dong2@gmail.com",
+      "address": "Khối 2, Thị Trấn, Núi Thành, Quảng Nam"
+    },
+    {
+      "id": 3,
+      "customerType": {
+        "id": 5,
+        "name": "Member"
+      },
+      "name": "Phạm Lê Đông 3 edited 4",
+      "dateOfBirth": "2003-11-24",
+      "idCard": "323456789",
+      "phoneNumber": "323456789",
+      "email": "dong3@gmail.com",
+      "address": "Khối 3, Thị Trấn, Núi Thành, Quảng Nam"
+    },
+    {
+      "id": 4,
+      "customerType": {
+        "id": 4,
+        "name": "Silver"
+      },
+      "name": "Phạm Lê Đông 4",
+      "dateOfBirth": "2003-03-02",
+      "idCard": "423456789",
+      "phoneNumber": "423456789",
+      "email": "dong4@gmail.com",
+      "address": "Khối 4, Thị Trấn, Núi Thành, Quảng Nam"
+    },
+    {
+      "id": 5,
+      "customerType": {
+        "id": 5,
+        "name": "Member"
+      },
+      "name": "Phạm Lê Đông 5",
+      "dateOfBirth": "2003-1-17",
+      "idCard": "523456789",
+      "phoneNumber": "523456789",
+      "email": "dong5@gmail.com",
+      "address": "Khối 5, Thị Trấn, Núi Thành, Quảng Nam"
+    },
+    {
+      "id": 6,
+      "customerType": {
+        "id": 5,
+        "name": "Member"
+      },
+      "name": "Phạm Lê Đông 6",
+      "dateOfBirth": "2003-04-07",
+      "idCard": "623456789",
+      "phoneNumber": "623456789",
+      "email": "dong6@gmail.com",
+      "address": "Khối 6, Thị Trấn, Núi Thành, Quảng Nam"
+    },
+    {
+      "id": "10",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "name": "Đông Phạm 10",
+      "dateOfBirth": "2023-03-27",
+      "idCard": "103456789",
+      "phoneNumber": "0337355842",
+      "email": "dong10@gmail.com",
+      "address": "Khối 1, thị trấn Núi Thành, huyện Núi Thành, tỉnh Quảng Nam"
+    }
+  ],
+  "position": [
+    {
+      "id": 1,
+      "name": "Lễ Tân"
+    },
+    {
+      "id": 2,
+      "name": "Phục vụ"
+    },
+    {
+      "id": 3,
+      "name": "Chuyên viên"
+    },
+    {
+      "id": 4,
+      "name": "Giám sát"
+    },
+    {
+      "id": 5,
+      "name": "Quán lý"
+    },
+    {
+      "id": 6,
+      "name": "Giám đốc"
+    }
+  ],
+  "educationDegree": [
+    {
+      "id": 1,
+      "name": "Trung cấp"
+    },
+    {
+      "id": 2,
+      "name": "Cao đẳng"
+    },
+    {
+      "id": 3,
+      "name": "Đại học"
+    },
+    {
+      "id": 4,
+      "name": "Sau đại học"
+    }
+  ],
+  "division": [
+    {
+      "id": 1,
+      "name": "Sale-Marketing"
+    },
+    {
+      "id": 2,
+      "name": "Hành chính"
+    },
+    {
+      "id": 3,
+      "name": "Phục vụ"
+    },
+    {
+      "id": 4,
+      "name": "Quản lí"
+    }
+  ],
+  "employee": [
+    {
+      "id": 1,
+      "name": "Phạm Lê Đông 1",
+      "position": {
+        "id": 1,
+        "name": "Lễ Tân"
+      },
+      "educationDegree": {
+        "id": 1,
+        "name": "Trung cấp"
+      },
+      "division": {
+        "id": 1,
+        "name": "Sale-Marketing"
+      },
+      "dateOfBirth": "2003-05-17",
+      "idCard": "123456789",
+      "salary": 5000000,
+      "phoneNumber": "123456789",
+      "email": "dong1e@gmail.com",
+      "address": "Khối 1"
+    },
+    {
+      "id": 2,
+      "name": "Phạm Lê Đông 2",
+      "position": {
+        "id": 2,
+        "name": "Phục vụ"
+      },
+      "educationDegree": {
+        "id": 2,
+        "name": "Cao đẳng"
+      },
+      "division": {
+        "id": 2,
+        "name": "Hành chính"
+      },
+      "dateOfBirth": "2003-03-18",
+      "idCard": "223456789",
+      "salary": 5500000,
+      "phoneNumber": "223456789",
+      "email": "dong2e@gmail.com",
+      "address": "Khối 2"
+    },
+    {
+      "id": 3,
+      "name": "Phạm Lê Đông 3",
+      "position": {
+        "id": 3,
+        "name": "Chuyên viên"
+      },
+      "educationDegree": {
+        "id": 3,
+        "name": "Đại học"
+      },
+      "division": {
+        "id": 3,
+        "name": "Phục vụ"
+      },
+      "dateOfBirth": "2003-12-12",
+      "idCard": "323456789",
+      "salary": 6000000,
+      "phoneNumber": "323456789",
+      "email": "dong3e@gmail.com",
+      "address": "Khối 3"
+    },
+    {
+      "id": "4",
+      "name": "Đông Phạm 4 edited",
+      "position": {
+        "id": 3,
+        "name": "Chuyên viên"
+      },
+      "educationDegree": {
+        "id": 2,
+        "name": "Cao đẳng"
+      },
+      "division": {
+        "id": 3,
+        "name": "Phục vụ"
+      },
+      "dateOfBirth": "2022-06-08",
+      "idCard": "4",
+      "salary": "20000000",
+      "phoneNumber": "0337355842",
+      "email": "donge4@gmail.com",
+      "address": "Khối 4"
+    }
+  ]
+}
